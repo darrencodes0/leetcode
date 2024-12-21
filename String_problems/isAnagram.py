@@ -1,4 +1,4 @@
-def isAnagram(self):
+def isAnagram():
     first_word = "sjokera"
     second_word = "kojreas"
 
@@ -21,3 +21,6 @@ def isAnagram(self):
       return "Both words are anagrams"
     else:
       return "Both words are not anagrams"
+
+if __name__ == '__main__':
+  print(isAnagram())

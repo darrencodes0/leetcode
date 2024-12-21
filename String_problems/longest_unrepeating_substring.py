@@ -7,17 +7,20 @@
   anytime in-between and at the end. We use a set instead of a list because
   set is O(1) since it uses hash function compared to O(n) when removing an element."""
 
-  def longest_substring_ever(self):
-    word = "pwwkew"
-    character_set = set()
-    l = 0
-    max_substring = 0
-    
-    for i in range(len(word)):
-      while word[i] in character_set:
-        character_set.remove(word[l])
-        l += 1
-      character_set.add(word[i])
-      max_substring = max(max_substring, i - l + 1)
-    
-    print(max_substring)
+def longest_substring_ever():
+  word = "pwwkew"
+  character_set = set()
+  l = 0
+  max_substring = 0
+  
+  for i in range(len(word)):
+    while word[i] in character_set:
+      character_set.remove(word[l])
+      l += 1
+    character_set.add(word[i])
+    max_substring = max(max_substring, i - l + 1)
+  
+  return max_substring
+
+if __name__ == '__main__':
+  print(longest_substring_ever())
