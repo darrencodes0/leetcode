@@ -1,6 +1,6 @@
 from Student import Student
 from ArraySort import ArraySort
-from BinarySearch import BinarySearch
+from array_problems.Binary_Search import BinarySearch
 
 def main():
   id = int(input("Enter the student ID: "))
