@@ -21,3 +21,23 @@ class BinarySearch:
         l = mid+1
 
     return -1
+  
+  def recursive_binary_search(self, low, high, target):
+    if low > high:
+      return -1
+
+    mid = math.floor((low+high)/2)
+
+    if self.array[mid] == target:
+      return mid
+    elif self.array[mid] > target:
+      return self.recursive_binary_search(low, mid-1, target)
+    else: 
+      return self.recursive_binary_search(mid+1, high, target)
+    
+    """
+    REVIEW: 
+    recurvisely calls the function and changes low nad high value. Compares
+    mid value each time with highs and lows to maintain the bounds of the array effectively
+    decreasing the array by half each iteration."""
+
