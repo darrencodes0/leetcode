@@ -65,6 +65,16 @@ class ArraySort:
           i += 1
 
       return array
+  
+  """
+  REVIEW:
+  Using recursion, we repeatedly call merge_sort to split the array until it reaches length of 1 with the
+  return statement as the base case. Then we merge the subarrays together into the original array to save
+  some space by overriding the numbers. During the merge, we compare both arrays k and j and see which number
+  is the smallest and then put it into the array, until either array k or array j is empty. Then if theres
+  any elements left in etiher arrays, we grab the rest of those numbers in that array and place them into 
+  the array. 
+  """
 
   def quick_sort(self, low, high, array):
      
@@ -77,6 +87,7 @@ class ArraySort:
 
   """
     REVIEW for Quick Sort:
+    O(n^2)
     Set low = 0, high = len(array) - 1 and input array. It recursively finds the pivot through
     partition. Then using the partition value it recursively calls quick sort so it can continue to find
     pivots. The partition sorts the array in that elements on left side of pivot is 
@@ -128,6 +139,7 @@ class ArraySort:
   
   """
   REVIEW:
+  O(n^2)
   Fastest sorting algorithm that I coded lol, basically start from 2nd index iterate to the end of the array
   Then instantiate j to be i each time, check each preceding element before it and check to see if the element 
   is smaller than the j element. If it is then swap with the left element with the element of the j. 
