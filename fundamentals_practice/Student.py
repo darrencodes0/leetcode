@@ -33,3 +33,4 @@ class Student:
                 "Name:" + self.name + "\n " + \
                 "Age:" + str(self.age) + "\n" + \
                 "GPA:" + str(self.gpa)
+    
