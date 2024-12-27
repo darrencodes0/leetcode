@@ -79,7 +79,7 @@ class ArraySort:
     REVIEW for Quick Sort:
     Set low = 0, high = len(array) - 1 and input array. It recursively finds the pivot through
     partition. Then using the partition value it recursively calls quick sort so it can continue to find
-    pivots. The partition also somewhat sorts the array in that elements on left side of pivot is 
+    pivots. The partition sorts the array in that elements on left side of pivot is 
     smaller and elements on the right side of pivot is greater.
     """
 
@@ -113,6 +113,31 @@ class ArraySort:
     When j reaches pivot index it ends the loop. At the end, we increment i value by 1 
     then swap it with the pivot (partition). Return the partition value.
     """
+
+  def insertion_sort(self, array):
+    for i in range(1,len(array)):
+      j = i
+
+      while j > 0 and array[j] < array[j-1]:
+        temp = array[j]
+        array[j] = array[j-1]
+        array[j-1] = temp
+        j -= 1
+    
+    return array
+  
+  """
+  REVIEW:
+  Fastest sorting algorithm that I coded lol, basically start from 2nd index iterate to the end of the array
+  Then instantiate j to be i each time, check each preceding element before it and check to see if the element 
+  is smaller than the j element. If it is then swap with the left element with the element of the j. 
+  J keeps decrementing until it reaches the 1st element of 0th index in which it breaks out of the while loop.
+  """
+    
+        
+        
+     
+       
     
     
       
@@ -122,4 +147,4 @@ class ArraySort:
 if __name__ == '__main__':
     array = [5, 1, 2, 3, 5, 1, 10, 52, 43]
     solution = ArraySort()
-    solution.print_array(solution.quick_sort(0, len(array) - 1, array))
+    solution.print_array(solution.insertion_sort(array))
