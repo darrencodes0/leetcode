@@ -23,10 +23,7 @@ class two_sum:
         return [i,hashmap[array[i]]]
       
       hashmap[target-array[i]] = i
-
-
-    
-    
+      
     """
     REVIEW:
     Adds the complement so if it was 4 in the arra, it would be 2:0. Then when it finds for ex:
