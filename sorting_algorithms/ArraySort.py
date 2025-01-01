@@ -115,15 +115,15 @@ class ArraySort:
 
     return i
   
-    """
-    REVIEW for Partition:
-    No need to check the last element which is THE pivot position (j < pivotIndex). When j value
-    is less than pivotIndex, increment i then swap i value with j value. Then increment j 
-    and do the same step, until j reaches the pivot.
+  """
+  REVIEW for Partition:
+  No need to check the last element which is THE pivot position (j < pivotIndex). When j value
+  is less than pivotIndex, increment i then swap i value with j value. Then increment j 
+  and do the same step, until j reaches the pivot.
 
-    When j reaches pivot index it ends the loop. At the end, we increment i value by 1 
-    then swap it with the pivot (partition). Return the partition value.
-    """
+  When j reaches pivot index it ends the loop. At the end, we increment i value by 1 
+  then swap it with the pivot (partition). Return the partition value.
+  """
 
   def insertion_sort(self, array):
     for i in range(1,len(array)):
@@ -140,7 +140,7 @@ class ArraySort:
   """
   REVIEW:
   O(n^2)
-  Fastest sorting algorithm that I coded lol, basically start from 2nd index iterate to the end of the array
+  Fastest sorting algorithm that I coded lol, basically start from 1st index iterate to the end of the array
   Then instantiate j to be i each time, check each preceding element before it and check to see if the element 
   is smaller than the j element. If it is then swap with the left element with the element of the j. 
   J keeps decrementing until it reaches the 1st element of 0th index in which it breaks out of the while loop.
