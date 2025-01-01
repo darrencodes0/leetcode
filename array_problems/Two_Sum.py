@@ -14,25 +14,24 @@ class two_sum:
     return "No two sum is possible for target"    
 
   def two_sum_hash_map(self, target):
-    array = [1,3,4,2]
+    array = [1,0,4,5,2,3]
     hashmap = {}
 
     for i in range(len(array)):
 
-      if target - array[i] in hashmap.keys():
-        return [i,hashmap[target - array[i]]]
+      if array[i] in hashmap.keys():
+        return [i,hashmap[array[i]]]
       
-      hashmap[array[i]] = i
+      hashmap[target-array[i]] = i
+
+
+    
     
     """
     REVIEW:
-    Adds the element and index into the hashmap, for ex 1:0 and 3:1 from the array.
-    It checks to see if the number is in the hashmap, if it is then it returns both
-    i current index and the index of the number that was put into the hashmap.
-    For ex: 4:2 is placed, then next iteration for 2, if 6-2 = 4 in hashmap.keys()
-    which 4 is in the hashmap and has a value of 2. Then index 2 and 3 will be returned
-    as the two complements.
-    
+    Adds the complement so if it was 4 in the arra, it would be 2:0. Then when it finds for ex:
+    2 in the hashmap, it returns 0 index and element 4 index which would be 2 here.
+
     This solution would take O(n) because you are looping through the array once
     """
 
@@ -45,7 +44,7 @@ class two_sum:
 
 if __name__ == '__main__':
   solution = two_sum()
-  print(solution.two_sum_hash_map(6))
+  print(solution.two_sum_hash_maps(6))
 
 """
 Brute force approach:
