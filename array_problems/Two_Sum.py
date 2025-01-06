@@ -1,7 +1,7 @@
 class two_sum:
 
-  def _init_(self):
-    self.array = []
+  def __init__(self):
+    self.array = [3,5,2,1,7,2,9,6,4]
 
   def two_sum(self, target):
     array = [1,3,4,6,7,9,10,2]
@@ -32,16 +32,9 @@ class two_sum:
     This solution would take O(n) because you are looping through the array once
     """
 
-
-    
-    
-
-
-
-
 if __name__ == '__main__':
   solution = two_sum()
-  print(solution.two_sum_hash_maps(6))
+  print(solution.two_sum_review(6))
 
 """
 Brute force approach:
